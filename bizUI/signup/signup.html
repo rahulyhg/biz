@@ -1,0 +1,192 @@
+
+<div ng-include="'templates/header.html'"> </div>
+
+<div class="container">    
+    
+    <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">   
+
+      <div class="alert alert-danger alert-dismissible"  ng-show="loginError">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        {{loginError}}
+      </div>
+
+      <div class="alert alert-success alert-dismissible"  ng-show="regSucess">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        Thank you!. Verification link sent to your email address please activate and continue.
+      </div>
+
+      <div class="panel panel-default" >
+            <div class="panel-heading login">
+                <div class="panel-title">REGISTRATION</div>               
+            </div>     
+
+            <div style="padding-top:30px" class="panel-body" >
+                    
+                <form id="registerForm" name="registerForm" ng-submit="userRegister()" method="POST" novalidate class="form-horizontal" role="form">
+                            
+                    <div class="form-group col-sm-12">
+                      <input id="firstName" type="text" class="form-control" name="firstName" placeholder="First Name" ng-model="loginUser.firstName" required>   
+                      <div ng-show="registerForm.firstName.$touched || registerForm.$submitted" role="alert" ng-messages-multiple class="ng-invalid-message text-danger">
+                          <div ng-show="registerForm.firstName.$error.required">first name is required</div>
+                      </div>                                     
+                    </div>
+
+                    <div class="form-group col-sm-12">                      
+                      <input id="lastName" type="text" class="form-control" name="lastName" placeholder="Last Name" ng-model="loginUser.lastName" required>   
+                      <div ng-show="registerForm.lastName.$touched || registerForm.$submitted" role="alert" ng-messages-multiple class="ng-invalid-message text-danger">
+                          <div ng-show="registerForm.lastName.$error.required">last name is required</div>
+                      </div>                                     
+                    </div>
+
+                    <div class="form-group col-sm-12">                      
+                      <input id="Email" type="email" class="form-control" name="Email" placeholder="Email" ng-model="loginUser.Email" required>   
+                      <div ng-show="registerForm.Email.$touched || registerForm.$submitted" role="alert" ng-messages-multiple class="ng-invalid-message text-danger">
+                          <div ng-show="registerForm.Email.$error.required">email is required</div>
+                          <div ng-show="registerForm.Email.$error.email">this email is not valid</div>
+                      </div>                                     
+                    </div>
+
+                    <div class="form-group col-sm-12">
+                        <input id="Password" type="password" class="form-control" name="Password" placeholder="Password" autocomplete="off" ng-model="loginUser.Password" ng-minlength="6" ng-maxlength="15" required>
+                        <div ng-show="registerForm.Password.$touched || registerForm.$submitted" role="alert" ng-messages-multiple class="ng-invalid-message text-danger">
+                          <div ng-show="registerForm.Password.$error.required">password is required</div>
+                          <div ng-show="registerForm.Password.$error.minlength || registerForm.Password.$error.maxlength">The password must be in minimum 6 characters and maximum 15!</div>
+                        </div>
+                    </div>   
+
+                    <div class="form-group col-sm-12">
+                      <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" autocomplete="off" ng-model="loginUser.confirmPassword" required>
+                      <div ng-show="registerForm.confirmPassword.$touched || registerForm.$submitted" role="alert" ng-messages-multiple class="ng-invalid-message text-danger">
+                        <div ng-show="registerForm.confirmPassword.$error.required">confirm password is required</div>
+                      </div>
+                    </div>                            
+                        
+                  
+                    <div style="margin-top:10px" class="form-group">
+
+                        <div class="col-sm-12 controls">
+                           <button type="submit" class="btn btn-bizjump" ng-disabled="!registerForm.$valid">      Sign Up</button>
+                           <a href="" ui-sref="login" class="btn btn-bizjump">Cancel</a>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-12 control">
+                            <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                                Already Registered? <a href="" ui-sref="login">SIGN IN</a> 
+                            </div>
+                            
+                        </div>
+                    </div>    
+                </form>     
+
+            </div>                     
+      </div>  
+  </div>
+
+
+
+
+
+
+<!--
+
+
+<div class="login" style="background-color:transparent !important;">
+
+  <div class="logo">
+    <h2 class="logo-default form-title">Bizjumper </h2>
+  </div>
+
+  <div class="menu-toggler sidebar-toggler">
+  </div>
+
+  <div class="content">
+    <form class="login-form " id="registerForm" name="registerForm" ng-submit="userRegister()" method="POST" novalidate>
+
+      <h3 class="form-title">Register</h3>
+
+      <div class="alert alert-danger alert-dismissible" ng-show="loginError">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        {{loginError}}
+      </div>
+      <div class="form-group">
+        <label class="control-label visible-ie8 visible-ie9">First Name</label>
+
+        <div class="input-icon">
+          <input class="form-control placeholder-no-fix" type="text" id="firstName" name="firstName" ng-model="loginUser.firstName"
+          placeholder="First Name" required>
+          <div ng-messages="registerForm.firstName.$touched&&registerForm.firstName.$error" role="alert" ng-messages-multiple class="ng-invalid-message text-danger">
+            <div ng-message="required">first name is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label visible-ie8 visible-ie9">Last Name</label>
+
+        <div class="input-icon">
+          <input class="form-control placeholder-no-fix" type="text" id="lastName" name="lastName" ng-model="loginUser.lastName" placeholder="Last Name"
+          required>
+          <div ng-messages="registerForm.lastName.$touched&&registerForm.lastName.$error" role="alert" ng-messages-multiple class="ng-invalid-message text-danger">
+            <div ng-message="required">last name is required</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label visible-ie8 visible-ie9">Email</label>
+
+        <div class="input-icon">
+          <input class="form-control placeholder-no-fix" type="email" id="Email" name="Email" ng-model="loginUser.email" placeholder="Email"
+          required>
+          <div ng-messages="registerForm.lastName.$touched&&registerForm.Email.$error" role="alert" ng-messages-multiple class="ng-invalid-message text-danger">
+            <div ng-message="required">email is required</div>
+            <div ng-message="email">not valid email format</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label visible-ie8 visible-ie9">Password</label>
+
+        <div class="input-icon">
+          <input class="form-control placeholder-no-fix" type="password" id="Password" name="Password" placeholder="Password" autocomplete="off"
+          ng-model="loginUser.password" required>
+          <div ng-messages="registerForm.Password.$touched&&registerForm.Password.$error" role="alert" ng-messages-multiple class="ng-invalid-message text-danger">
+            <div ng-message="required">password is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label visible-ie8 visible-ie9">Confirm Password</label>
+
+        <div class="input-icon">
+          <input class="form-control placeholder-no-fix" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password"
+          autocomplete="off" ng-model="loginUser.confirmPassword" required match-to="loginUser.password">
+          <div ng-messages="registerForm.confirmPassword.$touched&&registerForm.confirmPassword.$error" role="alert" ng-messages-multiple class="ng-invalid-message text-danger">
+            <div ng-message="required">confirm password is required</div>
+            <div ng-message="matchTo">not match with password</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-success" ng-disabled="!registerForm.$valid">
+          Register <i class="m-icon-swapright m-icon-white"></i>
+        </button>
+
+        <button type="submit" class="btn" ui-sref="login">
+          Cancel <i class="m-icon-swapright m-icon-white"></i>
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+
+
+
+</div>
+-->

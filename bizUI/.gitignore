@@ -1,0 +1,10 @@
+node_modules/
+node_modules/*
+app/bower_components/*
+typings/*
+json-server/fileUploadServer/upload/*
+nbproject/
+nbproject/*
+.vscode/*
+json-server/*
+tsd.json

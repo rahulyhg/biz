@@ -1,0 +1,261 @@
+/* app css stylesheet */
+
+p{
+
+}
+a:hover{ text-decoration: none; }
+
+
+/*Bizjumper Button*/
+     
+ .btn-warning {
+  color: #fff;
+  background-color: #2da292;
+  border-color: #2da292;
+ }
+
+ .btn-warning.active.focus, 
+ .btn-warning.active:focus, 
+ .btn-warning.active:hover, 
+ .btn-warning.focus:active, 
+ .btn-warning:active:focus, 
+ .btn-warning:active:hover, 
+ .open > .dropdown-toggle.btn-warning.focus, 
+ .open > .dropdown-toggle.btn-warning:focus, 
+ .open > .dropdown-toggle.btn-warning:hover {
+    color: #fff;
+    background-color: #2da292;
+    border-color: #2da292;
+}
+
+.btn-warning:hover{
+  color: #fff;
+    background-color: #2da292;
+    border-color: #2da292;
+}
+
+
+.biz-main-container{
+  margin-top: 52px;
+}
+
+
+.biz-logo{
+  width: 200px;
+}
+.navbar-inverse {
+    background-color: #292d32;
+    border-color: #292d32;
+}
+.navbar-brand {
+    padding: 4px 15px;
+}
+.navbar > .container-fluid .navbar-brand {
+    margin-left: -40px;
+}
+
+.upperclass{
+  text-transform: uppercase;
+}
+.biz-menu.navbar-inverse .navbar-nav > li {
+  margin-left: 15px;
+}
+.biz-menu.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+    padding: 7px 30px;
+    display: inline-block;
+    background-color: #373a3e;
+    border-radius: 45px;
+    margin-top: 9px;
+    font-size: 12px;
+  font-weight: bold;
+}
+
+.biz-menu.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+   
+     color: #9d9d9d;
+     background-color: #373a3e;
+     display: inline-block;
+}
+
+.user{ ont-weight: bold; color: #fff;}
+.biz-menu.navbar-inverse .navbar-nav > li > a.user { padding: 7px 20px;}
+.user-name{ padding: 0px 5px; }
+.user i{ font-size: 15px; }
+.user i.fa-caret-down{ color: #2da292; }
+
+/*Bizjumper Footer*/
+
+.biz-footer{
+  height: 50px;
+  background: #292d32;
+  text-align: center;
+  vertical-align: middle;
+  color: #7a7c7f;
+  padding-top: 15px;
+  margin-bottom: 2px;
+  margin-top:6%;
+}
+
+#loginbox{margin-top:12%;}
+
+.login.panel-heading {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #2ea194 !important;
+    background-origin: padding-box;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    color: #fff !important;
+}
+
+.btn-bizjump {background-color: #2ea194;border-color: #2ea194;color: #fff;}
+
+
+.add_a_com{
+  margin-bottom: 20px;
+}
+#table_1{
+  margin-top:100px;
+}
+#example{
+  border:1px solid #ccc;
+}
+
+#table_2{
+  margin-top:100px;
+  margin-bottom:100px;
+}
+#example_2{
+  border:1px solid #ccc;
+}
+td.action{
+
+  text-align: center;
+}
+
+td.action a{
+  width: 25px;
+  height: 25px;
+  border:1px solid #2da292;
+  display: inline-block;
+  border-radius: 4px;
+  padding-top: 1px;
+  color: #2da292;
+  text-decoration: none;
+}
+
+.pagination > .active > a, 
+.pagination > .active > a:focus, 
+.pagination > .active > a:hover, 
+.pagination > .active > span, 
+.pagination > .active > span:focus, 
+.pagination > .active > span:hover{
+
+  background-color: #2da292;
+    border-color: #2da292;
+    border-right-color: #fff;
+    border-left-color: #fff;
+}
+
+.pagination > .disabled > a, 
+.pagination > .disabled > a:focus, 
+.pagination > .disabled > a:hover, 
+.pagination > .disabled > span, 
+.pagination > .disabled > span:focus, 
+.pagination > .disabled > span:hover{
+  background-color: #2da292;
+    border-color: #2da292;
+    color: #fff;
+}
+
+
+.division{
+  margin-top: 18%;
+  margin-bottom: 18%;
+}
+.divsion-1, .divsion-2, .divsion-3, .divsion-4{
+    padding-left: 2.5%;
+  }
+
+@media (min-width: 992px) {
+  .divsion-1, .divsion-2, .divsion-3, .divsion-4{
+    padding-left: 4%;
+  }
+}
+.divsion-1 .round{
+  height: 150px;
+  width: 150px;
+  background-color: #37d7bb;
+  border-radius: 50%;
+  border:1px solid #37d7bb;
+}
+
+.divsion-1 .round img{
+  text-align: center;
+  padding-top: 35%;
+  padding-left: 25%;
+}
+.divsion-1 .part-name{
+  padding-left: 27%;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.divsion-2 .round{
+  height: 150px;
+  width: 150px;
+  background-color: #0087bf;
+  border-radius: 50%;
+  border:1px solid #0087bf;
+}
+
+.divsion-2 .round img{
+  text-align: center;
+  padding-top: 35%;
+  padding-left: 35%;
+}
+.divsion-2 .part-name{
+  padding-left: 30%;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.divsion-3 .round{
+  height: 150px;
+  width: 150px;
+  background-color: #a0d468;
+  border-radius: 50%;
+  border:1px solid #a0d468;
+}
+
+.divsion-3 .round img{
+  text-align: center;
+  padding-top: 35%;
+  padding-left: 30%;
+}
+.divsion-3 .part-name{
+  padding-left: 22%;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.divsion-4 .round{
+  height: 150px;
+  width: 150px;
+  background-color: #f9a912;
+  border-radius: 50%;
+  border:1px solid #f9a912;
+}
+
+.divsion-4 .round img{
+  text-align: center;
+  padding-top: 35%;
+  padding-left: 30%;
+}
+.divsion-4 .part-name{
+  padding-left: 24%;
+  font-size: 20px;
+  margin-top: 20px;
+}

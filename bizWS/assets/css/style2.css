@@ -1,0 +1,119 @@
+/* Pitch Dashboard Style Sheet*/
+body {background-color: #ffffff; color: #666666; font-family: 'Microsoft Tai Le', 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;}
+#header {display: block; background-color: #323132; color: #ffffff; width: 100%; height: auto;}
+#logo, #account, #useremail, #icon, #topnav li, #subnav li {display: inline-block; vertical-align: middle;}
+#logo {padding: 0.5% 1%; margin: 0 40% 0 10%;}
+#account {margin: 0 5% 0 0;}
+#account, #useremail {color:#1d9ae9;}
+#hr1 {border: 0; height: 1px; background: #000; background-image: linear-gradient(to right, #323132, #000, #323132); margin: 0;}
+#topnav { margin-left: 21%; font-size: 1.05em;}
+#topnav li {height: auto; width: auto; margin: 0 1.5%; padding: 1% 2% ; vertical-align: middle;}
+#topnav li a {color: #ffffff; text-decoration: none;}
+.n1 {background-color: #ffffff; color: #ff9b05; border-radius: 4px 4px 0 0; border: 0;}
+#subnav { margin-left: 11.75%; font-size: 0.95em;}
+#subnav li {height: auto; width: auto; margin: 0 0.5%; padding: 0.8% 1% ; vertical-align: middle;}
+#sn1 {background-color: #ff9b05; color: #ffffff;}
+#subnav li a {color: #666666; text-decoration: none;}
+#hr2 {border: 0; height: 1px; background: #ccc; margin: 0; background-image: linear-gradient(to right, #fff, #ccc, #ccc, #ccc, #ccc, #ccc, #fff);}
+#dashleft {display: inline-block; height: auto; width: 10%; border-right: 1px solid #ccc; padding: 2% 2%; font-size: 1.05em; margin-left: 10.5%;}
+#dashleft li {margin-bottom: 20%;}
+#dashleft a {color: #666666; text-decoration: none;}
+.dl {color: #ff9b05;}
+.active{color: #ff9b05 !important;}
+/* Content 1 */
+#content1 {display: inline-block; height: 483px; width: 65%;; background-image: url(../img/name.png); vertical-align: top; background-repeat: no-repeat; margin-left: 5%; padding: 2% 2%;}
+#cname {width: 45%; height: auto; padding: 1% 4%; border: 1px solid #cccccc; border-radius: 4px; color: #cccccc; font-size: 2.2em; text-align: center; margin-left: 11%; margin-top: 4%; box-shadow: 0 2px 30px -2px #bbbbbb;}
+#p1 {width: 45%; height: auto; border: 0; text-align: center; line-height: 150%; margin: 11% 0 0 23%; font-size: 1.2em;}
+
+/* Content 2 */
+#content2 {display: inline-block; height: 483px; width: 65%; vertical-align: top; margin-left: 5%; padding: 2% 2%;}
+#badge {display: inline-block; margin-left: 3.5%;}
+#upload {border: 1px dashed #bbbbbb; height: auto; width: 60%; border-radius: 10px; padding: 3% 3%; margin-left: 7%; margin-top: -14%; margin-bottom: 6%;}
+#select {width: 50%; height: auto; text-align: center; margin-left: 24.3%; padding: 2% 2%; margin-bottom: 2.5%; line-height: 150%;}
+#file {margin-left: 27.8%; width: 47.5%; font-size: 1.2em; background-color: #1d9ae9; color: #ffffff; border-radius: 0 2px 2px 0;margin-bottom: 3%;}
+#subtxt {font-size: 0.85em; margin-left: 5.5%;}
+#note {font-size: 1.1em; margin-left: 4.8%;}
+
+
+/* Content 3 */
+#content3 {display: inline-block; height: 483px; width: 65%; vertical-align: top; margin-left: 5%; padding: 2% 1%;}
+#problem {display: block; margin-left: 33%; margin-bottom: 1%;}
+#probtxt {display: block; text-align: center; line-height: 150%; margin-bottom: 3.5%; width: 85%;}
+#que1 {    display: block;font-weight: bold; margin-bottom: 2%;}
+.descriptbox {width: 74%; height: auto; border: 1px solid #cccccc; border-radius: 4px;margin-left: 5%; color: #222222; font-size: 1.1em; font-family: 'Microsoft Tai Le'; overflow:auto; font-weight: 500;}
+
+
+/* Content 4 */
+#content4 {display: inline-block; height: 483px; width: 65%; vertical-align: top; margin-left: 2%; padding: 2% 1%;}
+#solution {display: inline-block; vertical-align: middle; margin-right: 4%;}
+#soltxt {display: inline-block; width: 65%; height:auto; text-align: center; line-height: 150%;vertical-align: middle;}
+#que2 {display: block; margin-left: 5%; margin-top: -5%; margin-bottom: 1%; padding: 2% 2%; text-align: center;}
+#txtarea4 {margin-left: 17%;}
+
+
+/* Content 5 */
+#content5 {display: inline-block; height: 483px; width: 65%; vertical-align: top; margin-left: 2%; padding: 2% 1%;}
+#tartxt {display: inline-block; width: 65%; height: auto; text-align: center; line-height: 150%;vertical-align: middle;}
+#target {display: inline-block; vertical-align: middle;}
+#que3 {margin-left: 5%; margin-top: -1%;  display: block; padding: 2% 0}
+#txtarea5 {display: block; margin-left: -5%;}
+
+/* Content 6 */
+#content6 {display: inline-block; height: 483px; width: 65%; vertical-align: top; margin-left: 3%; padding: 2% 1%;}
+#competxt {display: block; width: 85%; height: auto; text-align: center; line-height: 150%;}
+#competitors {display: inline-block; margin-left: 10%; margin-top: 2%; margin-bottom: 5%;}
+#addc {margin-left: 10%;  display: inline-block;vertical-align: top; margin-top: 8%;}
+#addc p {width: 100%; height: auto; padding: 10% 10%; background-color: #2383c4; border-radius: 4px;}
+#addc a {color: #fff; text-decoration: none;}
+#emptybox {display: block; margin-left: 5%; border: 1px dashed #ccc; border-radius: 8px; width: 65%; height: auto; padding: 3%; 3%;}
+#emptybox img {display: inline-block; vertical-align: middle; margin-right: 5%; margin-left: 12%;}
+#emptybox p {display: inline-block; text-align: center;}
+/* popup */
+#cover{ position:fixed; top:0; left:0; background:rgba(0,0,0,0.4); z-index:5; width:100%; height:100%; display:none; }
+#comppu {height:auto; width:30%; margin:0 auto; position:relative; z-index:10; display:none; background-color: #ffffff; border-radius: 0 0 8px 8px; color: #666666; margin-top: -36%; margin-bottom: 14.7%;}
+#puheader {background-color: #2a76ac; text-align: center;padding: 5% 5%; color: #ffffff; font-size: 1.1em;}
+#comppu:target, #comppu:target + #cover{ display:block; opacity:2;}
+#cdetails { padding: 5% 5%;}
+#namec {padding: 2% 2%;}
+#compename {padding: 2% 2%; width:80%;margin-bottom: 1%; margin-left: 2.5%; display: block; border-radius: 4px; border: 1px solid #cccccc;}
+#advtg {padding: 2% 2%;}
+#advantage {padding: 2% 2%; width:80%;margin-bottom: 8%; margin-left: 2.5%; display: block; border-radius: 4px; border: 1px solid #cccccc;}
+#save {margin-left: 3%; margin-right: 3%; background-color: #4cdb35; border: 0; color: #fff; font-size: 1.1em; padding: 1.5% 3%; border-radius: 3px;}
+#cancel {background-color: #ccc; border: 0; color: #666; font-size: 1.1em; padding: 1.5% 3%; border-radius: 3px;}
+#save:hover {background-color: #3fb82b; transition: 0.2s;}
+#cancel:hover {background-color: #bab9b9; transition: 0.2s;}
+#cancel:focus {outline: none;}
+
+
+/* Content 7 */
+#content7 {display: inline-block; height: 483px; width: 65%; vertical-align: top; margin-left: 2%; padding: 2% 1%;}
+#fundtxt {display: block; width: 85%; height: auto; text-align: center; line-height: 150%;}
+#seek {display: inline-block; vertical-align: middle; margin-left: 26%; margin-right: 11%;}
+#seek p {line-height: 150%;}
+#seek input {padding: 2% 2%; margin-left: 10%; border-radius: 4px; border: 1px solid #cccccc;}
+#content7 img {vertical-align: middle;}
+#fundesc { display: block;}
+#fundesc p {line-height: 150%; padding: 2% 2%; margin-left: 3%;}
+
+
+/* Content 8 */
+#content8 {display: inline-block; height: 483px; width: 65%; vertical-align: top; margin-left: 2%; padding: 2% 1%;}
+#salestxt {display: block; width: 85%; height: auto; text-align: center; line-height: 150%;}
+#content8 img {margin-left: 5%; display: inline-block; margin-top: -1%;}
+#content8 p {display: inline-block; vertical-align: bottom; margin-bottom: 0.5%;}
+#content8 textarea {margin-top: 2%;}
+
+
+/* Content 9 */
+#content9 {display: inline-block; height: 483px; width: 65%; vertical-align: top; margin-left: 2%; padding: 2% 1%;}
+
+/* Button */
+.lft-button{background: #eee none repeat scroll 0 0;
+    float: left;
+    margin: 10px 0 15px;
+    width: 100%;}
+
+/* footer */
+#container4 {clear: both;}
+#footer {background-color: #b58761; padding: 0.5% 1%; color: #000; text-decoration: none; text-align: center;}
+#footer a {text-decoration: none; color:#000;}

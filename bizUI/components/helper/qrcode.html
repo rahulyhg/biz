@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title>share by phone - givenera</title>
+    <style>
+        body{ font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 16px;}
+    </style>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/jquery-qrcode/dist/jquery.qrcode.min.js"></script>
+</head>
+<body>
+    <h3 style="border-bottom: 1px solid #DDDDDD; margin-bottom:15px; padding-bottom: 10px; text-align:center;">用手机扫下面的二维码分享</h3>
+    <div id="qrcode" style="margin-bottom:15px;" align="center"></div>
+    <div style="border-top: 1px solid #DDDDDD;padding-top:11px;">
+        <div style="font-size:12px;">打开微信，点击底部的“发现”，使用 “扫一扫”，即可通过微信分享该网页。</div>
+    </div>
+    <script>
+        $.urlParam = function (name) {
+            var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+            if (results == null) {
+                return null;
+            }
+            else {
+                return results[1] || 0;
+            }
+        }
+    </script>
+    <script>         
+        $(function () {
+            $('#qrcode').qrcode({ width: 200, height: 200, text: decodeURIComponent($.urlParam('url')) });
+        });
+    </script>
+</body>
+</html>

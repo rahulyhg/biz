@@ -1,0 +1,77 @@
+
+<div ng-include="'templates/header.html'"> </div>
+
+<div class="container">    
+    
+    <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">   
+
+      <div class="alert alert-danger alert-dismissible"  ng-show="loginError">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        {{loginError}}
+      </div>
+
+      <div class="panel panel-default" >
+            <div class="panel-heading login">
+                <div class="panel-title">SIGN IN</div>               
+            </div>     
+
+            <div style="padding-top:30px" class="panel-body" >
+                    
+                <form id="loginForm" name="loginForm" ng-submit="userLogin()" method="POST" novalidate class="form-horizontal" role="form">
+                            
+                    <div  class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                      <input id="login-username" type="email" class="form-control" name="Email" placeholder="Email" ng-model="loginUser.userName" required>                                                      
+                    </div>
+                    <div ng-show="loginForm.Email.$touched || loginForm.$submitted" role="alert" ng-messages-multiple class="ng-invalid-message text-danger">
+                          <div ng-show="loginForm.Email.$error.required">email is required</div>
+                          <div ng-show="loginForm.Email.$error.email">this email is not valid</div>
+                    </div> 
+                        
+                    <div style="margin-top: 25px" class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="login-password" type="password" class="form-control" name="Password" placeholder="Password" autocomplete="off" ng-model="loginUser.password" required>                     
+                    </div>                               
+                    <div ng-show="loginForm.Password.$touched || loginForm.$submitted" role="alert" ng-messages-multiple class="ng-invalid-message text-danger">
+                          <div ng-show="loginForm.Password.$error.required">password is required</div>
+                    </div>    
+                  
+                    <div style="margin-top:20px" class="form-group">
+
+                        <div class="col-sm-8 controls">
+                           <button type="submit" class="btn btn-bizjump" ng-disabled="!loginForm.$valid">      Login <i class="glyphicon glyphicon-log-in"></i></button>
+                           <!-- ng-isabled="!loginForm.$valid"-->
+                        </div>
+
+                        <div class="col-sm-4 input-group">
+                            <div class="checkbox">
+                              <label>
+                                <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                              </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-12 control">
+                            <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%"></div>
+
+                            <div class="col-md-8">
+                                Don't have an account! <a href="" ui-sref="signup">Sign Up Here</a> 
+                            </div>
+                            <div class="col-md-4">
+                                <a href="" ui-sref="forgotpwd">Forgot Password</a> 
+                            </div>
+                        </div>
+                    </div>    
+                </form>     
+
+            </div>                     
+      </div>  
+  </div>
+
+
+

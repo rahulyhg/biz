@@ -1,0 +1,378 @@
+@media screen and (min-width: 770px) {
+    .resize{
+      padding: 0 5%;
+    }
+}
+
+.outer-div{
+
+    max-width: 100%;
+    overflow-x: scroll;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.inner-div{
+    min-width: 150%;
+    overflow: hidden;
+}
+
+
+.outer-div::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.outer-div::-webkit-scrollbar
+{
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+.outer-div::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #555;
+}
+
+
+
+
+.forecast-left-panel .panel .panel-heading {
+    color: #2EA194;
+    background-color: #fff;
+    border:1px solid #2EA194;
+}
+.forecast-left-panel .panel .panel-heading:hover,
+.forecast-left-panel .panel .panel-heading:focus,
+.forecast-left-panel .panel .panel-heading.active {
+    color: #fff;
+    background-color: #2EA194;
+    border:1px solid #2EA194;
+}
+
+
+.forecast-left-panel .panel .panel-heading .panel-title {
+    
+    font-size: 14px;
+}
+
+
+.form-control:focus{
+      border-color: #2EA194;
+}
+
+
+
+
+
+
+
+
+
+
+.forecast-left-panel{
+
+  margin-top: 5%;
+}
+
+
+.forcast-right-panel{
+
+  padding-top: 5%;
+  padding-bottom: 5%
+}
+
+.dyn-form{
+  margin:5% 0px;
+}
+
+.cus-btn{
+  padding-top: 5%;
+}
+
+
+
+/*Setup Cost CSS Section*/
+
+/*.setup-right-panel{
+
+  padding: 20px;
+}*/
+.setup_info{
+  border:1px solid #ccc;
+  border-radius: 4px;
+  display: table;
+  padding: 10px;
+}
+.panel-table .panel-body{
+  padding:0;
+}
+
+.panel-table .panel-body .table-bordered{
+  border-style: none;
+  margin:0;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type {
+    text-align:center;
+    width: 100px;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr > th:last-of-type,
+.panel-table .panel-body .table-bordered > tbody > tr > td:last-of-type {
+  border-right: 0px;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type,
+.panel-table .panel-body .table-bordered > tbody > tr > td:first-of-type {
+  border-left: 0px;
+}
+
+.panel-table .panel-body .table-bordered > tbody > tr:first-of-type > td{
+  border-bottom: 0px;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr:first-of-type > th{
+  border-top: 0px;
+}
+
+.panel-table .panel-footer .pagination{
+  margin:0; 
+}
+
+/*
+used to vertically center elements, may need modification if you're not using default sizes.
+*/
+.panel-table .panel-footer .col{
+ line-height: 34px;
+ height: 34px;
+}
+
+.panel-table .panel-heading .col h3{
+ line-height: 30px;
+ height: 30px;
+}
+
+.panel-table .panel-body .table-bordered > tbody > tr > td{
+  line-height: 34px;
+}
+
+a.table_edit{
+  display: inline-block !important;
+  padding: 3px 7px !important;
+  border:1px solid #999 !important;
+  border-radius: 4px !important;
+  text-align: center !important;
+  cursor: pointer;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+button.table_edit{
+  display: inline-block !important;
+  padding: 3px 7px !important;
+  border:1px solid #999 !important;
+  border-radius: 4px !important;
+  text-align: center !important;
+  cursor: pointer;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: #337ab7;
+}
+
+
+a.table_delet{
+  display: inline-block !important;
+  padding: 3px 7px !important;
+  border:1px solid #999 !important;
+  border-radius: 4px !important;
+  text-align: center !important;
+  cursor: pointer;
+  margin-top: 5%;
+}
+
+a.table_edit_01{
+  display: inline-block !important;
+  padding: 3px 7px !important;
+  border:1px solid #2EA194 !important;
+  border-radius: 4px !important;
+  text-align: center !important;
+  cursor: pointer;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  color:#2EA194;
+}
+
+
+
+a.table_delet_01{
+  display: inline-block !important;
+  padding: 3px 7px !important;
+  border:1px solid #2EA194 !important;
+  border-radius: 4px !important;
+  text-align: center !important;
+  cursor: pointer;
+  margin-top: 0%;
+  color:#2EA194;
+}
+
+#EditModal .modal-header,
+#DeletModal .modal-header{
+  background-color: #2EA194;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+
+  background-color: #2EA194;
+  color: #fff;
+  border-color: #ccc;
+}
+
+.pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover{
+  background-color: #2EA194;
+  color: #fff;
+}
+
+.action{
+  text-align: center;
+}
+
+
+
+.custom.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.custom.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px; /* Adjusts for spacing */
+}
+
+.custom .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.add_a_com{
+  margin-bottom: 2%;
+}
+
+#table_1{
+
+  margin-top: 2%;
+  /*border: 1px solid #ddd;*/
+ 
+}
+
+
+
+
+#table_2{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.total-assets td h5{
+
+    padding: 0 10px;
+}
+
+.fore-left-menu{
+  /*text-align:center; */
+  display:inline-block; 
+  width:75%;
+}
+
+
+
+.forecast_view.table>thead{
+  background-color: #292D32;
+  color:#fff;
+}
+.forecast_view.table>tbody>tr>td{
+
+      border-top: 1px solid #fff;
+}
+
+.forecast_view.table>tbody>tr.clickable{
+  background-color: #ddd;
+}
+.forecast_view.table>tbody>tr>td.clickable{
+  background-color: #ddd;
+}
+.forecast_view.table>tbody>tr.bold{
+  background-color: #ddd;
+}
+/*For Tablet Device*/
+@media screen and (max-width: 768px) {
+.fore-left-menu{
+  text-align:left; 
+  display:inline-block; 
+  width:80%;
+}
+  .forecast-left-panel .panel-title a {
+    padding: 15px 5px;
+    display: block;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+
+.forecast-left-panel .panel-body table tr td a {
+    padding: 10px 0px 10px 10px;
+    display: block;
+    text-decoration: none;
+    color: #999;
+    font-size: 12px;
+}
+
+.forecast-left-panel .panel-body table tr td a:hover,
+.forecast-left-panel .panel-body table tr td a:focus,
+.forecast-left-panel .panel-body table tr td a:active {
+    padding: 10px 0px 10px 10px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+}
+
+
+
+}
+
+
+
+/*For Tablet Device*/
+@media screen and (max-width: 360px) {
+
+
+
+  
+}
+
+
+
+
+/* Footer Css*/
+footer {
+    text-align: center;
+    background-color: #222;
+    padding: 10px 0;
+    color:#fff;
+   
+   }
+ .terms p a{
+  color:#1D9AE9;
+ } 
