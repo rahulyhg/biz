@@ -516,4 +516,4 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 $config['composer_autoload'] = TRUE;
 
-require_once APPPATH . 'vendor/autoload.php';
+//require_once APPPATH . 'vendor/autoload.php';
