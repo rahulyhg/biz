@@ -23,8 +23,14 @@ messageService.factory('accountServices', ['$resource', 'configuration', '$rootS
             dashboard: $resource(configuration.apiUrl + 'dashboard/companies', {user_id: '@user_id'}, {
                 company_list: { method: 'GET' }
             }),
-            company: $resource(configuration.apiUrl + 'dashboard/compdelete', {user_id:'@user_id',comp_id:'@comp_id'}, {
+            company: $resource(configuration.apiUrl + 'dashboard/compdelete/:user_id/:comp_id', {user_id:'@user_id',comp_id:'@comp_id'}, {
                 compdelete: { method: 'GET' }
+            }),
+            industry_report: $resource(configuration.apiUrl + 'industry_report/list', {}, {
+                list: { method: 'GET' }
+            }),
+            market_intelligene: $resource(configuration.apiUrl + 'market_intelligene/enquiry', {}, {
+                enquiry: { method: 'POST' }
             }),
             
         };

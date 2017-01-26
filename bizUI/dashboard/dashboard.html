@@ -1,52 +1,95 @@
 
 <div ng-include="'templates/navHeader.html'"> </div>
 
-<div class="container-fluid biz-main-container">
+<div class="container-fluid biz-main-container" >
 
-    <div class="row">
+  <div class="row division">
 
-        <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
 
-          <div class="col-md-8 col-sm-12">            
+        <div class="col-md-8 col-sm-12">
+
+            <div class="row">
+
+                <div class="col-md-3 col-sm-3 divsion-1">
+                        
+                  <a href="" ui-sref="pitch">
+                      <div class="round " >
+                          <img src="./images/Shape_1.png" class="align-middle">
+                      </div>
+                  </a>
+                       
+                  <p class="part-name">Pitch</p>
+                </div>
+
+                <div class="col-md-3 col-sm-3 divsion-2">
+
+                     <a href="#">
+                         <div class="round " >
+                                <img src="./images/Shape_2.png" class="align-middle">
+                         </div>
+                     </a>
+                     <p class="part-name">Plan</p>
+                </div>
+
+                <div class="col-md-3 col-sm-3 divsion-3">
+
+                     <a href="#">
+                         <div class="round " >
+                                <img src="./images/Shape_3.png" class="align-middle">
+                         </div>
+                     </a>   
+                     <p class="part-name">Forecast</p>
+                </div>
+
+                <div class="col-md-3 col-sm-3 divsion-4">
+
+                     <a href="#">
+                         <div class="round " >
+                                <img src="./images/Shape_4.png" class="align-middle">
+                         </div>
+                     </a>   
+                        <p class="part-name">Canvas</p>
+                </div>
+
+            </div>
+
+            <div class="row second-section">
+                <div class="col-md-3 col-sm-3 divsion-5">
                     
-              <div class="custom_table">                        
-                      
-                  <div id="table_1">
+                       
+                </div>
 
-                    <div class="add_a_com">
-                        <a class="btn btn-sm btn-warning" href="#"> <i class="fa fa-plus-circle"></i> &nbsp;Add a Company</a>
+                <div class="col-md-3 col-sm-3 divsion-6">
 
-                    </div> 
+                     <a href="#" ui-sref="industryreport">
+                         <div class="round " >
+                                <img src="./images/Shape_5.png" class="align-middle">
+                         </div>
+                     </a>
+                     <p class="part-name">Industry Report</p>
+                </div>
 
-                    <table id="example" class="table table-striped" cellspacing="0" width="100%">
-                        <thead>
-                            <tr>
-                                <th>S.No</th>
-                                <th>My Companies</th>
-                                <th>Created Date</th>
-                                <th class="no-sort">Action</th>
-                            </tr>
-                        </thead>                                     
-                        <tbody>
-                            <tr ng-repeat="comp in comp_list">
-                                <td>{{$index+1}}</td>
-                                <td>{{comp.name}}</td>
-                                <td>{{comp.created}}</td>
-                                <td class="action">                                   
-                                   <a ui-sref="company"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></a>
-                                   <a ng-click="compdelete({{comp.company_id}})"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                </td>
-                            </tr>                            
-                        </tbody>
-                    </table>
-                  </div>
+                <div class="col-md-3 col-sm-3 divsion-7">
 
-              </div>
+                     <a href="" ui-sref="market_intelligence">
+                         <div class="round " >
+                                <img src="./images/Shape_6.png" class="align-middle">
+                         </div>
+                     </a>   
+                     <p class="part-name extra-style">Market Intelligence Report</p>
+                </div>
+
+                <div class="col-md-3 col-sm-3 divsion-8">
+
+                </div>
+
+                </div>
 
             </div>
 
             <div class="col-md-2"></div>
 
-      </div>
+        </div>
 
-  </div>
+    </div>

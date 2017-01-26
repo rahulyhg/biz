@@ -1,0 +1,378 @@
+<div ng-include="'templates/navHeader.html'"> </div>
+
+<div class="container-fluid biz-main-container report-container">
+
+    <div class="ind-report" style="background-image:url('./images/market-intelligence/market-intelligence.jpg'); height: 450px; ">
+            
+    </div>
+
+            
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8 col-sm-12 report">
+
+            <md-content>
+                <md-tabs md-dynamic-height md-border-bottom>
+                    <md-tab label="one">
+                        <md-content class="md-padding">
+
+                            <div class="report-discription">            
+                                <div class="row heading"> 
+                                    <div class="col-lg-3 col-md-2 col-sm-2"></div>
+                                    <div class="col-lg-6 col-md-8 col-sm-8"> <h2>Sample Market <br>Intelligence Report :</h2></div>
+                                    <div class="col-lg-3 col-md-2 col-sm-2"></div>
+
+                                </div>
+
+                                <div class="row ipad-image"> 
+                                    <div class="col-lg-3 col-md-2 col-sm-2"></div>
+                                    <div class="col-lg-6 col-md-8 col-sm-8 ipad"></div>
+                                    <div class="col-lg-3 col-md-2 col-sm-2"></div>
+
+                                </div>
+
+                                <div class="market-footer">
+                                     <button type="button" class="btn btn-warning">DOWNLOAD SAMPLE REPORT</button>
+                                </div>
+                            </div>
+
+                        </md-content>
+                    </md-tab>
+
+                    <md-tab label="two">
+                        <md-content class="md-padding">
+
+                            <div class="report-discription">
+            
+                                <div class="row pannel form-pannel"> 
+                                   
+                                    <div class="col-lg-12 col-md-12 col-sm-12 enquiry-heading">                                                                            
+                                        <div class="enq-full-tab">
+
+                                            <div class="tab-1">
+                                              <div class="b-border border-right">Enquiry Form</div>
+                                            </div> 
+
+                                        </div>
+
+                                        <div class="right-tab">
+                                         
+                                            <h2>Sample Market Intelligence Report</h2>
+
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 report-form">
+                                        <div class="row" style=" margin: 0 0 5% 0;">
+                                            <div class="col-sm-1"></div>
+                                            <div class="col-sm-10">
+
+                                                <form id="enquiryForm" name="enquiryForm" ng-submit="enquirySubmit()" method="POST" novalidate class="form-horizontal" role="form">
+
+                                                    <div class="form-group row">
+                                                      <label for="company_name" class="col-xs-6 col-form-label">Name Of Company*</label>
+                                                      <div class="col-xs-6">
+                                                        <input class="form-control" type="text"  id="company_name" ng-model="enqForm.company_name" required>   
+                                                          <div ng-show="enquiryForm.company_name.$touched || enquiryForm.$submitted" role="alert" ng-messages-multiple class="ng-invalid-message text-danger">
+                                                         <div ng-show="enquiryForm.company_name.$error.required">Name Of Company</div>
+                                                          </div>                                     
+                                                      </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="year-founded" class="col-xs-6 col-form-label">Year Founded*</label>
+                                                        <div class="col-xs-6">
+                                                            <select class="form-control" id="founded-year" ng-model="enqForm.found_year" required>
+                                                              <option value="">Select Year</option>
+                                                              <option value="2014">2014</option>
+                                                              <option value="2015">2015</option>
+                                                              <option value="2016">2016</option>
+                                                              <option value="2017">2017</option>
+                                                              <option value="2018">2018</option>
+                                                            </select>
+                                                            <div ng-show="enquiryForm.found_year.$touched || enquiryForm.$submitted" role="alert" ng-messages-multiple class="ng-invalid-message text-danger">
+                                                         <div ng-show="enquiryForm.found_year.$error.required">Please select the year founded</div>
+                                                          </div> 
+                                                        </div>    
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                          <label for="Contact-detail" class="col-xs-6 col-form-label">Contact Details (Email, Phone number, Address)*</label>
+                                                          <div class="col-xs-6">
+                                                            <input class="form-control" type="text"  id="contact-detail" ng-model="enqForm.contact_detail" required>
+                                                          </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                          <label for="designation-of-contact" class="col-xs-6 col-form-label">Designation of Contact Person*</label>
+                                                          <div class="col-xs-6">
+                                                            <input class="form-control" type="text"  id="designation-contact" ng-model="enqForm.designation" required>
+                                                          </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                          <label for="website" class="col-xs-6 col-form-label">Website*</label>
+                                                          <div class="col-xs-6">
+                                                            <input class="form-control" type="text"  id="website" ng-model="enqForm.website" required>
+                                                          </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                          <label for="no-of-employees" class="col-xs-6 col-form-label">No of Employees*</label>
+                                                          <div class="col-xs-6">
+                                                            <input class="form-control" type="text"  id="no-of-emp" ng-model="enqForm.employees" required>
+                                                          </div>
+                                                    </div>  
+                                                    <div class="form-group">
+                                                        <label for="brief-about-company" class="col-form-label">Brief about your company and products:</label>
+                                                        <textarea class="form-control input-lg" id="breif" rows="3" ng-model="enqForm.company_products"></textarea>
+                                                    </div> 
+
+                                                    <div class="form-group row">
+                                                        <label for="brief-about-company" class="col-form-label col-xs-12">Require section for market intelligence report (Select more than one):</label>
+                                                        
+
+                                                        <div class="col-xs-12">
+                                                            <fieldset>
+                                                             
+                                                                <div class="checkbox checkbox-inline checkbox-success">
+                                                                  <input type="checkbox" id="inlineCheckbox1"  ng-model="enqForm.section[1]" value="Customer Profiling">
+                                                                  <label for="inlineCheckbox1">Customer Profiling</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-inline checkbox-success">
+                                                                  <input type="checkbox" id="inlineCheckbox2"  ng-model="enqForm.section[2]" value="Customer Segmentation">
+                                                                  <label for="inlineCheckbox2">Customer Segmentation</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-inline checkbox-success ">
+                                                                  <input type="checkbox" id="inlineCheckbox3"  ng-model="enqForm.section[3]" value="Potential customer profiling">
+                                                                  <label for="inlineCheckbox3">Potential customer profiling</label>
+                                                                </div>
+
+                                                                <div class="checkbox checkbox-inline checkbox-success">
+                                                                  <input type="checkbox" id="inlineCheckbox4" ng-model="enqForm.section[4]" value="SWOT Analysis">
+                                                                  <label for="inlineCheckbox4">SWOT Analysis</label>
+                                                                </div>
+
+                                                                <div class="checkbox checkbox-inline checkbox-success">
+                                                                  <input type="checkbox" id="inlineCheckbox5" ng-model="enqForm.section[5]" value="Competition Landscape">
+                                                                  <label for="inlineCheckbox5">Competition Landscape</label>
+                                                                </div>
+
+                                                                <div class="checkbox checkbox-inline checkbox-success">
+                                                                  <input type="checkbox" id="inlineCheckbox6" ng-model="enqForm.section[6]" value="Industry Projection">
+                                                                  <label for="inlineCheckbox6">Industry Projection</label>
+                                                                </div>
+
+                                                                <div class="checkbox checkbox-inline checkbox-success">
+                                                                  <input type="checkbox" id="inlineCheckbox7" ng-model="enqForm.section[7]" value="Company Projection">
+                                                                  <label for="inlineCheckbox7">Company Projection</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-inline checkbox-success">
+                                                                  <input type="checkbox" id="inlineCheckbox8" ng-model="enqForm.section[8]" value="Market Entry Scope">
+                                                                  <label for="inlineCheckbox8">Market Entry Scope</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-inline checkbox-success">
+                                                                  <input type="checkbox" id="inlineCheckbox9" ng-model="enqForm.section[9]" value="Sustainable Growth Aspects">
+                                                                  <label for="inlineCheckbox9">Sustainable Growth Aspects</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-inline checkbox-success">
+                                                                  <input type="checkbox" id="inlineCheckbox10" ng-model="enqForm.section[10]" value="Trading gap">
+                                                                  <label for="inlineCheckbox10">Trading gap</label>
+                                                                </div>
+                                                                <div class="checkbox checkbox-inline checkbox-success">
+                                                                  <input type="checkbox" id="inlineCheckbox11" ng-model="enqForm.section[11]" value="Operations Gap">
+                                                                  <label for="inlineCheckbox11">Operations Gap</label>
+                                                                </div>
+                                                            </fieldset>
+                                                        </div>
+                                                       
+
+                                                    </div>
+
+
+                                                    <div class="form-group row">
+
+
+                                                        <label for="brief-about-company" class="col-form-label col-xs-12">What are the major reasons for getting market study:</label>
+                                                  
+
+                                                        <div class="col-xs-12 custom-checkbox-2">
+
+                                                          <fieldset>
+                                                              <div class="checkbox checkbox-success">
+                                                                  <input id="checkbox1" type="checkbox" ng-model="enqForm.market_study[1]" value="Potential alliance search">
+                                                                  <label for="checkbox1">
+                                                                      Potential alliance search
+                                                                  </label>
+                                                              </div>
+                                                              <div class="checkbox checkbox-success">
+                                                                  <input id="checkbox2" type="checkbox" ng-model="enqForm.market_study[2]" value="entry to new market">
+                                                                  <label for="checkbox2">
+                                                                      Entry to new market
+                                                                  </label>
+                                                              </div>
+                                                              <div class="checkbox checkbox-success">
+                                                                  <input id="checkbox3" type="checkbox" ng-model="enqForm.market_study[3]" value="Understanding certain business aspect of your company">
+                                                                  <label for="checkbox3">
+                                                                      Understanding certain business aspect of your company
+                                                                  </label>
+                                                              </div>
+                                                              <div class="checkbox checkbox-success">
+                                                                  <input id="checkbox4" type="checkbox" ng-model="enqForm.market_study[4]" value="Presenting to investors">
+                                                                  <label for="checkbox4">
+                                                                      Presenting to investors
+                                                                  </label>
+                                                              </div>
+                                                              <div class="checkbox checkbox-success">
+                                                                  <input id="checkbox5" type="checkbox" ng-model="enqForm.market_study[5]" value="Increasing market share">
+                                                                  <label for="checkbox5">
+                                                                      Increasing market share
+                                                                  </label>
+                                                              </div>
+                                                              
+                                                         
+                                                            </fieldset>
+                                                        </div> 
+
+
+                                                    </div> 
+
+                                                  <div class="form-group">
+                                                    <textarea class="form-control input-lg" id="breif" ng-model="enqForm.other_market_study" rows="3" placeholder="if any other market study"></textarea>
+                                                  </div> 
+
+                                                    <div class="form-group">
+                                                        <label for="brief-about-company" class="col-form-label">Are there any possible diffcult situations in your business that are troubling you:</label>
+                                                        <textarea class="form-control input-lg" id="brief-about-company" ng-model="enqForm.company_difficult" rows="3"></textarea>
+                                                    </div> 
+
+                                                    <div class="form-group">
+                                                        <label for="company-count" class="col-form-label">In how many cities your company is currently operational:</label>
+                                                        <textarea class="form-control input-lg" id="company-count" ng-model="enqForm.operational_cities_count" rows="3"></textarea>
+                                                    </div>                                                   
+
+                                                    <div class="form-group">
+                                                        <label for="days" class="col-form-label">In how many days do you expect the report:</label>
+                                                        <div class="">
+                                                            <select class="form-control" id="days" ng-model="enqForm.expect_days">
+                                                              <option value="">Select Days</option>
+                                                              <option value="7">7</option>
+                                                              <option value="8">8</option>
+                                                              <option value="9">9</option>
+                                                              <option value="10">10</option>
+                                                              <option value="11">11</option>
+                                                              <option value="12">12</option>
+                                                              <option value="13">13</option>
+                                                              <option value="14">14</option>
+                                                              <option value="15">15</option>
+                                                            </select>
+                                                        </div>    
+                                                    </div>
+
+                                                    <div class="market-footer">
+                                                         <button type="submit" class="btn btn-bizjump" ng-disabled="!enquiryForm.$valid">Submit</button>
+                                                    </div>
+
+                                                </form>  
+                                            </div>    
+                                            <div class="col-sm-1"></div>
+                                        </div>   
+                                     
+                                    </div>                                  
+
+                                </div>
+
+                            </div>
+
+                        </md-content>
+                    </md-tab>
+
+                    <md-tab label="three">
+                        <md-content class="md-padding">
+
+                            <div class="report-discription">
+            
+                                <div class="row pannel"> 
+                                    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                                    <div class="col-lg-10 col-md-10 col-sm-10">
+                                        
+                                        <div class="row default-pannel">
+                                            <div class="col-sm-4 market-thumb">
+                                                <img src="./images/market-intelligence/demo-image.png" class="img-responsive img-rounded" alt="Preview">
+                                            </div>
+                                            <div class="col-sm-8 market-report">
+                                                
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                                                <p class="other-links">
+                                                    <span class="preview"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i> &nbsp; <span style="color:#000;">Preview</span></a></span>
+
+                                                    <span class="download"><a href="#"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> &nbsp;<span style="color:#000;"> Download</span></a></span>
+
+                                                    <span class="delete"><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> &nbsp;<span style="color:#000;"> Delete</span></a></span>
+                                                </p>    
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row default-pannel">
+                                            <div class="col-sm-4 market-thumb">
+                                                <img src="./images/market-intelligence/demo-image.png" class="img-responsive img-rounded" alt="Preview">
+                                            </div>
+                                            <div class="col-sm-8 market-report">
+                                                
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                                                <p class="other-links">
+                                                    <span class="preview"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i> &nbsp; <span style="color:#000;">Preview</span></a></span>
+
+                                                    <span class="download"><a href="#"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> &nbsp;<span style="color:#000;"> Download</span></a></span>
+
+                                                    <span class="delete"><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> &nbsp;<span style="color:#000;"> Delete</span></a></span>
+                                                </p>    
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row default-pannel">
+                                            <div class="col-sm-4 market-thumb">
+                                                <img src="./images/market-intelligence/demo-image.png" class="img-responsive img-rounded" alt="Preview">
+                                            </div>
+                                            <div class="col-sm-8 market-report">
+                                                
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                                                <p class="other-links">
+                                                    <span class="preview"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i> &nbsp; <span style="color:#000;">Preview</span></a></span>
+
+                                                    <span class="download"><a href="#"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> &nbsp;<span style="color:#000;"> Download</span></a></span>
+
+                                                    <span class="delete"><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> &nbsp;<span style="color:#000;"> Delete</span></a></span>
+                                                </p>    
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1"></div>                                  
+
+                                </div>
+
+                            </div>
+
+                        </md-content>
+                    </md-tab>
+
+                </md-tabs>    
+            </md-content>       
+
+       
+    </div>
+
+    <div class="col-md-2"></div>
+
+</div>

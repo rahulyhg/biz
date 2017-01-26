@@ -1,0 +1,104 @@
+
+    <div ng-include="'templates/navHeader.html'"> </div>
+
+    <div class="container-fluid biz-main-container report-container">
+
+        <div class="ind-report" style="background-image:url('../../img/industry-report/industry-report-banner.jpg'); height: 450px; ">
+            
+        </div>
+
+            
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8 col-sm-12 report">
+
+
+            <form class="form-inline">
+
+              <div class="pull-left">  
+                  <div class="form-group ">
+                    <label >REFINE YOUR SEARCH &nbsp; <i class="fa fa-search" aria-hidden="true"></i></label>
+                    
+                  </div>
+              </div>  
+
+              <div class="pull-right">  
+                  <div class="form-group">
+                    <select class="form-control">
+                      <option value="">Select Industry</option>
+                      <option ng-repeat="list in ind_list" value="list.id">{{list.industry_type}}</option>                  
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <select class="form-control">
+                      <option>Select year</option>
+                      <option ng-repeat="year in years" value="year">{{year}}"</option>
+                    
+                    </select>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-warning">SUBMIT</button>
+              </div>
+            </form>
+
+            <div class="report-discription">
+            
+                
+
+                <div class="report-header">
+
+                    <p>Market Landscape Report: <span><img class="first-tree" src="../../img/industry-report/small-tree.png"></span></p>
+
+                    <div class="report-main">
+                      <div class="col-md-4 col-sm-4 report-main-left">
+                        
+                         <img src="../../img/industry-report/ipad.png" class="img-responsive" alt="Industry Report">
+
+                      </div>
+
+                      <div class="col-md-8 col-sm-8 report-main-right">
+
+                        <h3>Agriculture Landscape Report :</h3>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+
+                        <button type="button" class="btn btn-warning btn-lg">DOWNLOAD</button>
+
+                        <div class="industry-chart">
+                          <div class="col-sm-12"><img src="../../img/industry-report/Bar-chart.png" class="img-responsive" alt="Industry Report"></div>
+                          
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="report-footer">
+                    <p><a href="#">Download Sample Industry Report ></a></p>
+                </div>
+                     
+            </div>
+           
+        </div>
+
+       
+    </div>
+
+    <div class="col-md-2"></div>
+
+
+
+</div>
+
+<div class="row repo-foo">
+
+    <div class="col-sm-2 col-md-2"></div>
+
+    <div class=" col-md-8 col-sm-12 report-last-footer">
+      
+      <b>Note :</b>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+    </div>
+
+    <div class="col-sm-2 col-md-2"></div>
+
+</div> 

@@ -99,6 +99,16 @@ function routeConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 			url: '/pitch',
 			templateUrl: 'pitch/pitch.html',
 			controller: 'PitchController'
+		})
+		.state('industryreport', {
+			url: '/industryreport',
+			templateUrl: 'industry_report/report.html',
+			controller: 'IndustryRepController'
+		})
+		.state('market_intelligence', {
+			url: '/market_intelligence',
+			templateUrl: 'market_intelligence/market.html',
+			controller: 'MarketIntelligenceController'
 		});
 
     $urlRouterProvider.otherwise('/login');
